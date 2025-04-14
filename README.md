@@ -35,21 +35,7 @@ You can also install the plugin manually by copying the [`syntax/jira.vim`](http
 
 ## Usage
 
-I use the [Firefox](https://www.mozilla.org/en-US/firefox/) web browser together with the [textern](https://github.com/jlebon/textern) extension to write and edit Jira issues in Vim. To automatically apply the syntax highlighting upon editing an issue, I use the following configuration (you will need to replace `jira.mycompany.com` with the URL of your Jira instance):
-```vim
-let s:opened_file_path = expand('%:p')
-if s:opened_file_path =~ 'textern-.*jira.mycompany.com'
-    augroup firefox_textern_plugin
-    autocmd!
-    " Enable Jira syntax highlighting.
-    autocmd BufRead,BufNewFile *.txt setl ft=jira
-    " (Optional) Enable English spell checking.
-    autocmd BufRead,BufNewFile *.txt setl spell spelllang=en
-    augroup end
-endif
-```
-
-If you want to edit descriptions of Jira issues in Vim, check out [this blog post](https://blog.petrzemek.net/2024/03/03/editing-descriptions-of-jira-issues-in-vim/).
+I use the [Firefox](https://www.mozilla.org/en-US/firefox/) web browser together with the [textern](https://github.com/jlebon/textern) extension to write and edit Jira issues in Vim. Check out [this blog post](https://blog.petrzemek.net/2024/03/03/editing-descriptions-of-jira-issues-in-vim/)!
 
 ## Development
 
